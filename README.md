@@ -18,6 +18,18 @@ Special thanks to **smaeul** for all their work!
 1. Run `2_create_sd.sh /dev/<device>` to flash everything on the SD card.
 1. Configure your Archlinux :rocket:
 
+Steps to configure on Mango Pi:
+
+```
+pacman -Syu
+pacman -S dhclient dhcpcd dialog ell glibc ifplugd networkmanager libdaemon vim netctl systemd-resolvconf wireless_tools wpa_supplicant openssh
+systemctl enable NetworkManager
+systemctl enable sshd
+ln -s /lib/modules/5.19.0-AllWinnerD1-Smaeul /lib/modules/5.19.0-rc1-gfe178cf0153d-dirty
+passwd
+(reboot)
+```
+
 ## Using loop image file instead of a SD card
 Simply loop it using `sudo losetup -f -P <file>` and then use `/dev/loopX` as the target device.
 

@@ -113,7 +113,7 @@ ${SUDO} cp fstab "${MNT}/etc/fstab"
 rm fstab
 
 # set hostname
-echo 'licheerv' > hostname
+echo 'mangopi' > hostname
 ${SUDO} cp hostname "${MNT}/etc/"
 rm hostname
 
